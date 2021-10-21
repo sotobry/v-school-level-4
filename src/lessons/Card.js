@@ -1,20 +1,27 @@
-import React from 'react';
+import PropTypes from 'prop-types';
 
-export default class Card extends React.Component {
-  static defaultProps = {
-    cardColor: 'white',
-    height: 100,
-    width: 100
+const Card = props => {
+  const style = {
+    backgroundColor: props.cardColor,
+    height: props.height,
+    width: props.width
   };
 
-  render = () => {
-    const { props } = this;
-    const style = {
-      backgroundColor: props.cardColor,
-      height: props.height,
-      width: props.width
-    };
-    console.log(props.cardColor);
-    return <div style={style}></div>
-  };
+  console.log(props.cardColor);
+  return <div style={style}></div>;
 };
+
+Card.propTypes = {
+  // cardColor: PropTypes.string.isRequired,
+  cardColor: PropTypes.oneOf(['blue', 'red', 'green']),
+  height: PropTypes.number.isRequired,
+  width: PropTypes.number.isRequired,
+};
+
+Card.defaultProps = {
+  // cardColor: 'white',
+  // height: 100,
+  // width: 100
+};
+
+export default Card;
