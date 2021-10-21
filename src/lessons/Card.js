@@ -13,7 +13,7 @@ const Card = props => {
 
 Card.propTypes = {
   // cardColor: PropTypes.string.isRequired,
-  cardColor: PropTypes.oneOf(['blue', 'red', 'green']),
+  cardColor: PropTypes.oneOf(['blue', 'red', 'green']).isRequired,
   height: PropTypes.number.isRequired,
   width: PropTypes.number.isRequired,
 };
