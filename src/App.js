@@ -1,4 +1,6 @@
 import './App.css';
+
+import ThemeContext from './lessons/16_contextProvider/themeContext';
 // import DefaultProps from './lessons/defaultProps/DefaultProps';
 // import PropTypes from './lessons/02_propTypes/PropTypes';
 // import DefaultPropsAndPropTypesPractice from './lessons/03_defaultPropsAndPropTypesPractice/DefaultPropsAndPropTypesPractice';
@@ -8,7 +10,9 @@ import './App.css';
 // import HOCsPart4 from './lessons/12_HOCsPart4/HOCsPart4';
 // import RenderPropsPart2 from './lessons/13_renderPropsPart2/RenderPropsPart2';
 // import RenderPropsPart3 from './lessons/14_renderPropsPart3/RenderPropsPart3';
-import RenderPropsPractice from './lessons/15_renderPropsPractice/RenderPropsPractice';
+// import RenderPropsPractice from './lessons/15_renderPropsPractice/RenderPropsPractice';
+import ContextProvider from './lessons/16_contextProvider/ContextProvider';
+
 
 function App() {
   return (
@@ -22,7 +26,10 @@ function App() {
       {/* <HOCsPart4 /> */}
       {/* <RenderPropsPart2 /> */}
       {/* <RenderPropsPart3 /> */}
-      <RenderPropsPractice />
+      {/* <RenderPropsPractice /> */}
+      <ThemeContext.Provider value={false}>
+        <ContextProvider />
+      </ThemeContext.Provider>
     </div>
   );
 }
