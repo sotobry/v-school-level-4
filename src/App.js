@@ -10,10 +10,10 @@ import './App.css';
 // import RenderPropsPart2 from './lessons/13_renderPropsPart2/RenderPropsPart2';
 // import RenderPropsPart3 from './lessons/14_renderPropsPart3/RenderPropsPart3';
 // import RenderPropsPractice from './lessons/15_renderPropsPractice/RenderPropsPractice';
-import Context from './lessons/16_context/Context';
-import { ThemeContextProvider } from './lessons/16_context/themeContext';
-// import ContextChallenge1 from './lessons/17_contextChallenge1/ContextChallenge1';
-// import UsernameContext from './lessons/17_contextChallenge1/usernameContext';
+// import Context from './lessons/16_context/Context';
+// import { ThemeContextProvider } from './lessons/16_context/themeContext';
+import ContextChallenge1 from './lessons/17_contextChallenge1/ContextChallenge1';
+import { UsernameContextProvider } from './lessons/17_contextChallenge1/usernameContext';
 
 function App() {
   return (
@@ -28,12 +28,12 @@ function App() {
       {/* <RenderPropsPart2 /> */}
       {/* <RenderPropsPart3 /> */}
       {/* <RenderPropsPractice /> */}
-      <ThemeContextProvider>
-        <Context />
-      </ThemeContextProvider>
-      {/* <UsernameContext.Provider value='potato'> */}
-      {/* <ContextChallenge1 /> */}
-      {/* </UsernameContext.Provider> */}
+      {/* <ThemeContextProvider> */}
+      {/* <Context /> */}
+      {/* </ThemeContextProvider> */}
+      <UsernameContextProvider>
+        <ContextChallenge1 />
+      </UsernameContextProvider>
     </div>
   );
 }

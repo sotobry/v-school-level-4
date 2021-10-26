@@ -1,8 +1,8 @@
-import UsernameContext from './usernameContext';
+import { UsernameContext } from './usernameContext';
 
 const Header = () =>
   <UsernameContext.Consumer>{
-    username =>
+    ({ username }) =>
       <header>
         <p>Welcome, {username}!</p>
       </header>
