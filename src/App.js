@@ -12,8 +12,9 @@ import './App.css';
 // import RenderPropsPractice from './lessons/15_renderPropsPractice/RenderPropsPractice';
 // import Context from './lessons/16_context/Context';
 // import { ThemeContextProvider } from './lessons/16_context/themeContext';
-import ContextChallenge1 from './lessons/17_contextChallenge1/ContextChallenge1';
-import { UsernameContextProvider } from './lessons/17_contextChallenge1/usernameContext';
+// import ContextChallenge1 from './lessons/17_contextChallenge1/ContextChallenge1';
+// import { UsernameContextProvider } from './lessons/17_contextChallenge1/usernameContext';
+import UseState from './lessons/18_useState/useState';
 
 function App() {
   return (
@@ -31,9 +32,10 @@ function App() {
       {/* <ThemeContextProvider> */}
       {/* <Context /> */}
       {/* </ThemeContextProvider> */}
-      <UsernameContextProvider>
-        <ContextChallenge1 />
-      </UsernameContextProvider>
+      {/* <UsernameContextProvider> */}
+      {/* <ContextChallenge1 /> */}
+      {/* </UsernameContextProvider> */}
+      <UseState />
     </div>
   );
 }
