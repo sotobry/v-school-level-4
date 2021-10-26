@@ -14,7 +14,8 @@ import './App.css';
 // import { ThemeContextProvider } from './lessons/16_context/themeContext';
 // import ContextChallenge1 from './lessons/17_contextChallenge1/ContextChallenge1';
 // import { UsernameContextProvider } from './lessons/17_contextChallenge1/usernameContext';
-import UseState from './lessons/18_useState/useState';
+// import UseState from './lessons/18_useState/UseState';
+import ChangingState from './lessons/18_useState/ChangingState';
 
 function App() {
   return (
@@ -35,7 +36,8 @@ function App() {
       {/* <UsernameContextProvider> */}
       {/* <ContextChallenge1 /> */}
       {/* </UsernameContextProvider> */}
-      <UseState />
+      {/* <UseState /> */}
+      <ChangingState />
     </div>
   );
 }
