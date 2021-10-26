@@ -1,9 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Button = ({ isDarkMode }) =>
-  <button className={`${isDarkMode ?
-    'dark' : 'light'}-theme`}>
+const Button = ({ isDarkMode, toggleDarkMode }) =>
+  <button
+    className={`${isDarkMode ?
+      'dark' : 'light'}-theme`}
+    onClick={toggleDarkMode}
+  >
     Switch Theme
   </button>;
 

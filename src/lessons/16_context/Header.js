@@ -1,13 +1,13 @@
 import React from 'react';
-import ThemeContext from './themeContext';
+import { ThemeContextConsumer } from './themeContext';
 
 const Header = () =>
-  <ThemeContext.Consumer>{
-    isDarkMode =>
+  <ThemeContextConsumer>{
+    ({ isDarkMode }) =>
       <header className={`${isDarkMode ?
         'dark' : 'light'}-theme`}>
         <h2>{isDarkMode ? 'Dark' : 'Light'} theme</h2>
       </header>
-  }</ThemeContext.Consumer>;
+  }</ThemeContextConsumer>;
 
 export default Header;

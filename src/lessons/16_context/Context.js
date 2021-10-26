@@ -2,15 +2,15 @@ import './styles.css';
 import Header from './Header';
 import Button from './Button';
 
-import ThemeContext from './themeContext';
+import { ThemeContextConsumer } from './themeContext';
 
 const Context = () =>
   <div>
     <Header />
-    <ThemeContext.Consumer>{
-      isDarkMode => <Button isDarkMode={isDarkMode} />
-    }</ThemeContext.Consumer>
-    <Button />
+    <ThemeContextConsumer>{
+      ({ isDarkMode, toggleDarkMode }) => <Button isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
+    }</ThemeContextConsumer>
+    {/* <Button /> */}
   </div>;
 
 export default Context;
