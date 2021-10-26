@@ -10,10 +10,10 @@ import './App.css';
 // import RenderPropsPart2 from './lessons/13_renderPropsPart2/RenderPropsPart2';
 // import RenderPropsPart3 from './lessons/14_renderPropsPart3/RenderPropsPart3';
 // import RenderPropsPractice from './lessons/15_renderPropsPractice/RenderPropsPractice';
-// import ContextProvider from './lessons/16_contextProvider/ContextProvider';
-// import ThemeContext from './lessons/16_contextProvider/themeContext';
-import ContextChallenge1 from './lessons/17_contextChallenge1/ContextChallenge1';
-import UsernameContext from './lessons/17_contextChallenge1/usernameContext';
+import Context from './lessons/16_context/Context';
+import ThemeContext from './lessons/16_context/themeContext';
+// import ContextChallenge1 from './lessons/17_contextChallenge1/ContextChallenge1';
+// import UsernameContext from './lessons/17_contextChallenge1/usernameContext';
 
 
 function App() {
@@ -29,12 +29,12 @@ function App() {
       {/* <RenderPropsPart2 /> */}
       {/* <RenderPropsPart3 /> */}
       {/* <RenderPropsPractice /> */}
-      {/* <ThemeContext.Provider value={false}> */}
-      {/* <ContextProvider /> */}
-      {/* </ThemeContext.Provider> */}
-      <UsernameContext.Provider value='sotobry'>
+      <ThemeContext.Provider value={true}>
+        <Context />
+      </ThemeContext.Provider>
+      {/* <UsernameContext.Provider value='sotobry'>
         <ContextChallenge1 />
-      </UsernameContext.Provider>
+      </UsernameContext.Provider> */}
     </div>
   );
 }
