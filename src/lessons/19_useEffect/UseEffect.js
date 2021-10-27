@@ -7,20 +7,21 @@ const UseEffect = () => {
   const increment = () => setCount(count => count + 1);
   const decrement = () => setCount(count => count - 1);
 
-  const callback = () => {
-    console.log('useEffect triggered');
+  useEffect(() => {
     const randomColor = getRandomColor();
-    console.log(randomColor);
     setColorTo(randomColor);
-  };
+  }, [count]);
 
-  useEffect(callback, [count]);
+  useEffect(() => {
+    const intervalId = setInterval(() => increment(), 2000);
+    return () => clearInterval(intervalId);
+  }, []);
 
   return (
     <div>
       <h1 style={{ color }}>{count}</h1>
-      <button onClick={increment}>Increment</button>
-      <button onClick={decrement}>Decrement</button>
+      {/* <button onClick={increment}>Increment</button> */}
+      {/* <button onClick={decrement}>Decrement</button> */}
     </div>
   );
 }
