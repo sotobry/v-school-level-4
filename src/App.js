@@ -15,7 +15,8 @@ import './App.css';
 // import ContextChallenge1 from './lessons/17_contextChallenge1/ContextChallenge1';
 // import { UsernameContextProvider } from './lessons/17_contextChallenge1/usernameContext';
 // import UseState from './lessons/18_useState/UseState';
-import ChangingState from './lessons/18_useState/ChangingState';
+// import ChangingState from './lessons/18_useState/ChangingState';
+import ChangingMoreComplexState from './lessons/18_useState/ChangingMoreComplexState';
 
 function App() {
   return (
@@ -37,7 +38,8 @@ function App() {
       {/* <ContextChallenge1 /> */}
       {/* </UsernameContextProvider> */}
       {/* <UseState /> */}
-      <ChangingState />
+      {/* <ChangingState /> */}
+      <ChangingMoreComplexState />
     </div>
   );
 }
