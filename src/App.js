@@ -16,7 +16,8 @@ import './App.css';
 // import { UsernameContextProvider } from './lessons/17_contextChallenge1/usernameContext';
 // import UseState from './lessons/18_useState/UseState';
 // import ChangingState from './lessons/18_useState/ChangingState';
-import ChangingMoreComplexState from './lessons/18_useState/ChangingMoreComplexState';
+// import ChangingMoreComplexState from './lessons/18_useState/ChangingMoreComplexState';
+import UseEffect from './lessons/19_useEffect/UseEffect';
 
 function App() {
   return (
@@ -39,7 +40,8 @@ function App() {
       {/* </UsernameContextProvider> */}
       {/* <UseState /> */}
       {/* <ChangingState /> */}
-      <ChangingMoreComplexState />
+      {/* <ChangingMoreComplexState /> */}
+      <UseEffect />
     </div>
   );
 }
