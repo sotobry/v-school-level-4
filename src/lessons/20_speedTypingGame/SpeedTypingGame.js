@@ -3,14 +3,19 @@ import './styles.css';
 
 const SpeedTypingGame = () => {
 
-  const [text, setTextTo] = useState('')
+  const [text, setTextTo] = useState('');
+
+  const handleChange = ({ currentTarget: { value } }) =>
+    setTextTo(value);
+
+  console.log({ text });
   return (
     <div className='SpeedTypingGame'>
       <h1>Speed Typing Game</h1>
       <textarea
         placeholder='Start typing here...'
         value={text}
-        onChange={ev => setTextTo(ev.currentTarget.value)}
+        onChange={handleChange}
       />
       <h4>Time remaining: 00:00</h4>
       <button>Start</button>
