@@ -17,7 +17,8 @@ import './App.css';
 // import UseState from './lessons/18_useState/UseState';
 // import ChangingState from './lessons/18_useState/ChangingState';
 // import ChangingMoreComplexState from './lessons/18_useState/ChangingMoreComplexState';
-import UseEffect from './lessons/19_useEffect/UseEffect';
+// import UseEffect from './lessons/19_useEffect/UseEffect';
+import SpeedTypingGame from './lessons/20_speedTypingGame/SpeedTypingGame';
 
 function App() {
   return (
@@ -41,7 +42,8 @@ function App() {
       {/* <UseState /> */}
       {/* <ChangingState /> */}
       {/* <ChangingMoreComplexState /> */}
-      <UseEffect />
+      {/* <UseEffect /> */}
+      <SpeedTypingGame />
     </div>
   );
 }

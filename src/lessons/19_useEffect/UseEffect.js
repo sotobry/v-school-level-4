@@ -12,10 +12,10 @@ const UseEffect = () => {
     setColorTo(randomColor);
   }, [count]);
 
-  useEffect(() => {
-    const intervalId = setInterval(() => increment(), 2000);
-    return () => clearInterval(intervalId);
-  }, []);
+  // useEffect(() => {
+  //   const intervalId = setInterval(() => increment(), 2000);
+  //   return () => clearInterval(intervalId);
+  // }, []);
 
   return (
     <div>
