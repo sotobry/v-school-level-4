@@ -8,6 +8,13 @@ const SpeedTypingGame = () => {
   const handleChange = ({ currentTarget: { value } }) =>
     setTextTo(value);
 
+  const countWords = text => text.split(' ').filter(word => word).length;
+
+  const handleClick = () => {
+    const wordCount = countWords(text);
+    console.log(wordCount)
+  };
+
   console.log({ text });
   return (
     <div className='SpeedTypingGame'>
@@ -18,7 +25,7 @@ const SpeedTypingGame = () => {
         onChange={handleChange}
       />
       <h4>Time remaining: 00:00</h4>
-      <button>Start</button>
+      <button onClick={handleClick}>Start</button>
       <h1>Word Count: ???</h1>
     </div>
   );
