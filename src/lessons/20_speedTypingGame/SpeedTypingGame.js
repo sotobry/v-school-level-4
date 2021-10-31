@@ -2,9 +2,10 @@ import { useState, useEffect } from 'react';
 import './styles.css';
 
 const SpeedTypingGame = () => {
+  const STARTING_TIME = 5; //In seconds
 
   const [text, setTextTo] = useState('');
-  const [timeRemaining, setTimeRemainingTo] = useState(5);
+  const [timeRemaining, setTimeRemainingTo] = useState(STARTING_TIME);
   const [isTimerActive, setIsTimerActiveTo] = useState(false);
   const [wordCount, setWordCountTo] = useState(null);
 
@@ -13,7 +14,19 @@ const SpeedTypingGame = () => {
 
   const countWords = text => text.split(' ').filter(word => word).length;
 
-  const handleClick = () => setIsTimerActiveTo(true);
+  const startGame = () => {
+    setTextTo('');
+    setTimeRemainingTo(STARTING_TIME);
+    setIsTimerActiveTo(true);
+  };
+  const endGame = () => {
+    setIsTimerActiveTo(false);
+    setWordCountTo(countWords(text));
+  };
+  const handleClick = () => {
+    // setWordCountTo(0);
+    startGame();
+  };
 
   // let intervalId = null;
   // useEffect(() => {
@@ -38,14 +51,11 @@ const SpeedTypingGame = () => {
         );
       }
     }
-    else {
-      setIsTimerActiveTo(false);
-      const wordCount = countWords(text);
-      setWordCountTo(wordCount);
+    else if (isTimerActive) {
+      endGame();
     }
   }, [timeRemaining, isTimerActive]);
 
-  console.log({ text, isTimerActive, wordCount });
   return (
     <div className='SpeedTypingGame'>
       <h1>Speed Typing Game</h1>
@@ -53,9 +63,13 @@ const SpeedTypingGame = () => {
         placeholder='Start typing here...'
         value={text}
         onChange={handleChange}
+        disabled={!isTimerActive}
       />
       <h4>Time remaining: {timeRemaining} sec</h4>
-      <button onClick={handleClick}>Start</button>
+      <button
+        onClick={handleClick}
+        disabled={isTimerActive}
+      >{isTimerActive ? 'Running...' : 'Start'}</button>
       <h1>Word Count: {wordCount === null ? `???` : wordCount}</h1>
     </div>
   );
