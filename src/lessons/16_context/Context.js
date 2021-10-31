@@ -1,16 +1,19 @@
+import { useContext } from 'react';
 import './styles.css';
 import Header from './Header';
 import Button from './Button';
 
-import { ThemeContextConsumer } from './themeContext';
+import { ThemeContext } from './themeContext';
 
-const Context = () =>
-  <div>
-    <Header />
-    <ThemeContextConsumer>{
-      ({ isDarkMode, toggleDarkMode }) => <Button isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
-    }</ThemeContextConsumer>
-    {/* <Button /> */}
-  </div>;
+const Context = () => {
+  const { isDarkMode, toggleDarkMode } = useContext(ThemeContext);
+  return (
+    <div>
+      <Header />
+      <Button isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
+      {/* <Button /> */}
+    </div>
+  );
+};
 
 export default Context;

@@ -1,13 +1,15 @@
-import React from 'react';
-import { ThemeContextConsumer } from './themeContext';
+import { useContext } from 'react';
+import { ThemeContext } from './themeContext';
 
-const Header = () =>
-  <ThemeContextConsumer>{
-    ({ isDarkMode }) =>
-      <header className={`${isDarkMode ?
-        'dark' : 'light'}-theme`}>
-        <h2>{isDarkMode ? 'Dark' : 'Light'} theme</h2>
-      </header>
-  }</ThemeContextConsumer>;
+const Header = () => {
+  const { isDarkMode } = useContext(ThemeContext);
+  return (
+    <header className={`${isDarkMode ?
+      'dark' : 'light'}-theme`}>
+      <h2>{isDarkMode ? 'Dark' : 'Light'} theme</h2>
+    </header>
+  );
+};
+
 
 export default Header;

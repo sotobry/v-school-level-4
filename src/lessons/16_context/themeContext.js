@@ -1,6 +1,7 @@
 import React from 'react';
 
-const { Provider, Consumer } = React.createContext();
+const ThemeContext = React.createContext();
+const { Provider, Consumer } = ThemeContext;
 
 class ThemeContextProvider extends React.Component {
   state = {
@@ -21,4 +22,4 @@ class ThemeContextProvider extends React.Component {
   };
 };
 
-export { ThemeContextProvider, Consumer as ThemeContextConsumer };
+export { ThemeContext, ThemeContextProvider };
