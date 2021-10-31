@@ -1,3 +1,4 @@
+import { useToggler } from './useToggler';
 // import Toggler from './Toggler';
 
 // const Favorite = props => {
@@ -16,8 +17,9 @@
 //   );
 // };
 
-const Favorite = props => {
-  const { isFavorited, toggleFavorite } = props;
+const Favorite = () => {
+  const [isFavorited, toggleFavorite] = useToggler(false);
+
   return (
     <div>
       <h3>Click heart to favorite</h3>

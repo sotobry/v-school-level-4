@@ -1,3 +1,4 @@
+import { useToggler } from './useToggler';
 // import Toggler from './Toggler';
 
 // const Menu = props =>
@@ -17,8 +18,8 @@
 //   }
 //   />;
 
-const Menu = props => {
-  const { show, toggleShow } = props;
+const Menu = () => {
+  const [show, toggleShow] = useToggler(true);
   return (
     <div>
       <button onClick={toggleShow}>
