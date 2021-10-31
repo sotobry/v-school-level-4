@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import './styles.css';
 
 const SpeedTypingGame = () => {
@@ -8,6 +8,9 @@ const SpeedTypingGame = () => {
   const [timeRemaining, setTimeRemainingTo] = useState(STARTING_TIME);
   const [isTimerActive, setIsTimerActiveTo] = useState(false);
   const [wordCount, setWordCountTo] = useState(null);
+
+  const textAreaEl = useRef(null);
+
 
   const handleChange = ({ currentTarget: { value } }) =>
     setTextTo(value);
@@ -23,24 +26,31 @@ const SpeedTypingGame = () => {
     setIsTimerActiveTo(false);
     setWordCountTo(countWords(text));
   };
+
   const handleClick = () => {
     // setWordCountTo(0);
     startGame();
+    textAreaEl.current.focus();
   };
 
-  // let intervalId = null;
+  // const intervalRef = useRef();
   // useEffect(() => {
-  // intervalId = setInterval(() => {
-  // setTimerTo(timer => timer - 1);
-  // }, 1000);
-  // if (!timer) return () => {
-  // clearInterval(intervalId);
-  // }
-  // }, [])
+  //   if (timeRemaining === STARTING_TIME) {
+  //     const intervalId = setInterval(() => {
+  //       setTimeRemainingTo(time => time - 1);
+  //     }, 1000);
+
+  //     intervalRef.current = intervalId;
+  //   }
+  //   else if (timeRemaining === 1) return () => {
+  //     clearInterval(intervalRef.current);
+  //   }
+  // }, [timeRemaining]);
 
   // useEffect(() => {
-  // if (timer === 0) return () => clearInterval(intervalId);
-  // }, [timer]);
+  //   if (timeRemaining === 0) return () => clearInterval(intervalId);
+  // }, [timeRemaining]);
+
 
   useEffect(() => {
     if (timeRemaining) {
@@ -64,6 +74,7 @@ const SpeedTypingGame = () => {
         value={text}
         onChange={handleChange}
         disabled={!isTimerActive}
+        ref={textAreaEl}
       />
       <h4>Time remaining: {timeRemaining} sec</h4>
       <button
