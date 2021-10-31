@@ -4,8 +4,8 @@ const UseEffect = () => {
   const [count, setCount] = useState(0);
   const [color, setColorTo] = useState('');
 
-  const increment = () => setCount(count => count + 1);
-  const decrement = () => setCount(count => count - 1);
+  // const increment = () => setCount(count => count + 1);
+  // const decrement = () => setCount(count => count - 1);
 
   useEffect(() => {
     const randomColor = getRandomColor();
