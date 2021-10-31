@@ -30,6 +30,7 @@ const SpeedTypingGame = () => {
   const handleClick = () => {
     // setWordCountTo(0);
     startGame();
+    textAreaEl.current.disabled = false;
     textAreaEl.current.focus();
   };
 
