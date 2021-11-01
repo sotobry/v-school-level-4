@@ -6,6 +6,8 @@ import Profile from './pages/Profile';
 import Info from './pages/profile/Info';
 import Settings from './pages/profile/Settings';
 import Footer from './Footer';
+import ServicesList from './pages/services/ServicesList';
+import ServiceDetail from './pages/services/ServiceDetail';
 
 const ReactRouter = () => {
   return (
@@ -29,6 +31,12 @@ const ReactRouter = () => {
         </Route>
         <Route path='/profile/settings'>
           <Settings />
+        </Route>
+        <Route exact path='/services'>
+          <ServicesList />
+        </Route>
+        <Route path='/services/:serviceId'>
+          <ServiceDetail />
         </Route>
       </Switch>
       <Footer />
