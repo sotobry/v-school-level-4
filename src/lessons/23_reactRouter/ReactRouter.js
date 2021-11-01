@@ -3,11 +3,11 @@ import { Switch, Route } from 'react-router-dom';
 import Header from './Header';
 import Home from './pages/Home';
 import Profile from './pages/Profile';
-import Info from './pages/profile/Info';
+// import Info from './pages/profile/Info';
 // import Settings from './pages/profile/Settings';
 import Footer from './Footer';
-// import ServicesList from './pages/services/ServicesList';
-// import ServiceDetail from './pages/services/ServiceDetail';
+import ServicesList from './pages/services/ServicesList';
+import ServiceDetail from './pages/services/ServiceDetail';
 
 const ReactRouter = () => {
   return (
@@ -32,12 +32,12 @@ const ReactRouter = () => {
         <Route path='/profile/settings'>
           <Settings />
         </Route> */}
-        {/* <Route exact path='/services'>
+        <Route exact path='/services'>
           <ServicesList />
         </Route>
         <Route path='/services/:serviceId'>
           <ServiceDetail />
-        </Route> */}
+        </Route>
       </Switch>
       <Footer />
     </div>
