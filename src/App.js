@@ -18,9 +18,10 @@ import './App.css';
 // import ChangingState from './lessons/18_useState/ChangingState';
 // import ChangingMoreComplexState from './lessons/18_useState/ChangingMoreComplexState';
 // import UseEffect from './lessons/19_useEffect/UseEffect';
-import SpeedTypingGame from './lessons/20_speedTypingGame/SpeedTypingGame';
+// import SpeedTypingGame from './lessons/20_speedTypingGame/SpeedTypingGame';
 // import UseRef from './lessons/21_useRef/UseRef';
 // import CustomHooks from './lessons/22_customHooks/CustomHooks';
+import ReactRouter from './lessons/23_reactRouter/ReactRouter';
 
 function App() {
   return (
@@ -45,9 +46,10 @@ function App() {
       {/* <ChangingState /> */}
       {/* <ChangingMoreComplexState /> */}
       {/* <UseEffect /> */}
-      <SpeedTypingGame />
+      {/* <SpeedTypingGame /> */}
       {/* <UseRef /> */}
       {/* <CustomHooks /> */}
+      <ReactRouter />
     </div>
   );
 }
