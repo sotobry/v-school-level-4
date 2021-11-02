@@ -21,7 +21,8 @@ import './App.css';
 // import SpeedTypingGame from './lessons/20_speedTypingGame/SpeedTypingGame';
 // import UseRef from './lessons/21_useRef/UseRef';
 // import CustomHooks from './lessons/22_customHooks/CustomHooks';
-import ReactRouter from './lessons/23_reactRouter/ReactRouter';
+// import ReactRouter from './lessons/23_reactRouter/ReactRouter';
+import ReactRouterChallenge from './lessons/23_reactRouter/ReactRouterChallenge';
 
 function App() {
   return (
@@ -49,7 +50,8 @@ function App() {
       {/* <SpeedTypingGame /> */}
       {/* <UseRef /> */}
       {/* <CustomHooks /> */}
-      <ReactRouter />
+      {/* <ReactRouter /> */}
+      <ReactRouterChallenge />
     </div>
   );
 }
