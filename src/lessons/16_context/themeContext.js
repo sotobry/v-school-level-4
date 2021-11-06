@@ -1,9 +1,10 @@
-import { createContext, useState } from 'react';
 
-const ThemeContext = createContext();
-const { Provider } = ThemeContext;
+import React, { createContext, useState } from 'react';
 
 const ThemeContextProvider = ({ children }) => {
+
+  const ThemeContext = createContext();
+  const { Provider } = ThemeContext;
   const [isDarkMode, setIsDarkModeTo] = useState(false);
 
   const toggleDarkMode = () => setIsDarkModeTo(isDarkMode => !isDarkMode);

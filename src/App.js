@@ -22,7 +22,10 @@ import './App.css';
 // import UseRef from './lessons/21_useRef/UseRef';
 // import CustomHooks from './lessons/22_customHooks/CustomHooks';
 // import ReactRouter from './lessons/23_reactRouter/ReactRouter';
-import ReactRouterChallenge from './lessons/23_reactRouter/ReactRouterChallenge';
+// import ReactRouterChallenge from './lessons/23_reactRouter/ReactRouterChallenge';
+
+import { ThemeContextProvider } from './assignments/themeContext';
+import ChangingThemesUsingContext from './assignments/ChangingThemesUsingContext';
 
 function App() {
   return (
@@ -51,7 +54,10 @@ function App() {
       {/* <UseRef /> */}
       {/* <CustomHooks /> */}
       {/* <ReactRouter /> */}
-      <ReactRouterChallenge />
+      {/* <ReactRouterChallenge /> */}
+      <ThemeContextProvider>
+        <ChangingThemesUsingContext />
+      </ThemeContextProvider>
     </div>
   );
 }
